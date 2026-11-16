@@ -1,0 +1,1987 @@
+{
+ "version": "v1.1",
+ "sources": {
+  "课标2022": "义务教育各科课程标准（2022年版），教育部",
+  "课标2017": "普通高中各科课程标准（2017年版2020年修订），教育部",
+  "高考评价体系": "中国高考评价体系，教育部考试中心",
+  "PISA2022": "PISA 2022 数学评估框架，OECD",
+  "Anderson": "Anderson & Krathwohl 2001，布鲁姆目标分类修订版",
+  "TIMSS": "TIMSS 评估框架，认知维度：知道、应用、推理",
+  "题库现状": "本项目已有结构",
+  "业内": "命题和题库平台常见做法，无统一官方标准，常识定值，可迭代"
+ },
+ "facets": [
+  {
+   "id": "difficulty",
+   "name": "难度",
+   "level": "question",
+   "kind": "ordered",
+   "method": "ai",
+   "source": [
+    "题库现状"
+   ],
+   "ask": "按中考/高考的一般水平，这道题的难度属于哪一档？",
+   "values": [
+    {
+     "label": "易",
+     "def": "基础送分题"
+    },
+    {
+     "label": "中",
+     "def": "介于基础送分题和压轴题之间"
+    },
+    {
+     "label": "难",
+     "def": "压轴题或明显拉分的题"
+    }
+   ]
+  },
+  {
+   "id": "cognitive",
+   "name": "认知要求",
+   "level": "question",
+   "kind": "ordered",
+   "method": "ai",
+   "source": [
+    "TIMSS",
+    "课标2022",
+    "课标2017"
+   ],
+   "ask": "做对这道题，最高需要哪一层思维？",
+   "values": [
+    {
+     "label": "知道理解",
+     "def": "回忆、辨认、解释或一步直接判断，答案来自所学内容，不用找解题思路"
+    },
+    {
+     "label": "应用",
+     "def": "用学过的方法解决常规问题，步骤有范例可循"
+    },
+    {
+     "label": "综合探究",
+     "def": "题目陌生或多步综合，要自己分析、推理、找解题思路"
+    }
+   ]
+  },
+  {
+   "id": "context_type",
+   "name": "情境类别",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "高考评价体系"
+   ],
+   "applies": {
+    "excludeModules": [
+     "单项选择",
+     "完形填空",
+     "词汇与短文填空",
+     "语法填空",
+     "七选五",
+     "古诗文默写",
+     "名句默写",
+     "基础积累"
+    ]
+   },
+   "ask": "这道题设置的情境属于哪一类？",
+   "values": [
+    {
+     "label": "无情境",
+     "def": "直接考知识、计算或语言形式，没有设置情境"
+    },
+    {
+     "label": "生活实践",
+     "def": "来自日常生活、生产、社会或科技应用的真实问题"
+    },
+    {
+     "label": "学习探索",
+     "def": "来自学科学习、实验探究、学术材料或史料"
+    }
+   ]
+  },
+  {
+   "id": "context_source",
+   "name": "情境来源",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "PISA2022",
+    "业内"
+   ],
+   "applies": {
+    "excludeModules": [
+     "单项选择",
+     "完形填空",
+     "词汇与短文填空",
+     "语法填空",
+     "七选五",
+     "古诗文默写",
+     "名句默写",
+     "基础积累"
+    ]
+   },
+   "ask": "这道题情境的主要内容来源是什么？",
+   "values": [
+    {
+     "label": "无",
+     "def": "没有情境"
+    },
+    {
+     "label": "个人",
+     "def": "个人、家庭、同伴、校园生活"
+    },
+    {
+     "label": "职业",
+     "def": "工作、生产、经营"
+    },
+    {
+     "label": "社会",
+     "def": "社区、国家、公共事务、时政"
+    },
+    {
+     "label": "科学",
+     "def": "自然、科技、实验"
+    },
+    {
+     "label": "文化历史",
+     "def": "传统文化、文学、历史"
+    }
+   ]
+  },
+  {
+   "id": "context_complexity",
+   "name": "情境复杂度",
+   "level": "question",
+   "kind": "ordered",
+   "method": "ai",
+   "source": [
+    "课标2017"
+   ],
+   "applies": {
+    "excludeModules": [
+     "单项选择",
+     "完形填空",
+     "词汇与短文填空",
+     "语法填空",
+     "七选五",
+     "古诗文默写",
+     "名句默写",
+     "基础积累"
+    ]
+   },
+   "ask": "这道题的情境对学生来说属于哪一档？",
+   "values": [
+    {
+     "label": "熟悉",
+     "def": "常见情境，能直接套用所学"
+    },
+    {
+     "label": "关联",
+     "def": "要把情境和知识联系起来，做一些转换"
+    },
+    {
+     "label": "综合",
+     "def": "陌生或综合的情境，要自己建立解决路径"
+    }
+   ]
+  },
+  {
+   "id": "curriculum_area",
+   "name": "课标主题",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "课标2022",
+    "课标2017"
+   ],
+   "ask": "这道题主要属于课程标准里的哪个主题？",
+   "valuesBy": {
+    "初中.math": [
+     {
+      "label": "数与代数",
+      "def": "数与代数"
+     },
+     {
+      "label": "图形与几何",
+      "def": "图形与几何"
+     },
+     {
+      "label": "统计与概率",
+      "def": "统计与概率"
+     },
+     {
+      "label": "综合与实践",
+      "def": "综合与实践"
+     }
+    ],
+    "初中.physics": [
+     {
+      "label": "物质",
+      "def": "物质"
+     },
+     {
+      "label": "运动和相互作用",
+      "def": "运动和相互作用"
+     },
+     {
+      "label": "能量",
+      "def": "能量"
+     },
+     {
+      "label": "实验探究",
+      "def": "实验探究"
+     },
+     {
+      "label": "跨学科实践",
+      "def": "跨学科实践"
+     }
+    ],
+    "初中.chemistry": [
+     {
+      "label": "科学探究与化学实验",
+      "def": "科学探究与化学实验"
+     },
+     {
+      "label": "物质的性质与应用",
+      "def": "物质的性质与应用"
+     },
+     {
+      "label": "物质的组成与结构",
+      "def": "物质的组成与结构"
+     },
+     {
+      "label": "物质的化学变化",
+      "def": "物质的化学变化"
+     },
+     {
+      "label": "化学与社会·跨学科实践",
+      "def": "化学与社会·跨学科实践"
+     }
+    ],
+    "初中.biology": [
+     {
+      "label": "生物体的结构层次",
+      "def": "生物体的结构层次"
+     },
+     {
+      "label": "生物的多样性",
+      "def": "生物的多样性"
+     },
+     {
+      "label": "生物与环境",
+      "def": "生物与环境"
+     },
+     {
+      "label": "植物的生活",
+      "def": "植物的生活"
+     },
+     {
+      "label": "人体生理与健康",
+      "def": "人体生理与健康"
+     },
+     {
+      "label": "遗传与进化",
+      "def": "遗传与进化"
+     },
+     {
+      "label": "生物学与社会·跨学科实践",
+      "def": "生物学与社会·跨学科实践"
+     }
+    ],
+    "初中.history": [
+     {
+      "label": "中国古代史",
+      "def": "中国古代史"
+     },
+     {
+      "label": "中国近代史",
+      "def": "中国近代史"
+     },
+     {
+      "label": "中国现代史",
+      "def": "中国现代史"
+     },
+     {
+      "label": "世界古代史",
+      "def": "世界古代史"
+     },
+     {
+      "label": "世界近代史",
+      "def": "世界近代史"
+     },
+     {
+      "label": "世界现代史",
+      "def": "世界现代史"
+     },
+     {
+      "label": "跨学科主题学习",
+      "def": "跨学科主题学习"
+     }
+    ],
+    "初中.geography": [
+     {
+      "label": "认识全球",
+      "def": "认识全球"
+     },
+     {
+      "label": "认识区域",
+      "def": "认识区域"
+     },
+     {
+      "label": "地理工具与地理实践",
+      "def": "地理工具与地理实践"
+     },
+     {
+      "label": "跨学科主题学习",
+      "def": "跨学科主题学习"
+     }
+    ],
+    "初中.politics": [
+     {
+      "label": "道德教育",
+      "def": "道德教育"
+     },
+     {
+      "label": "中华优秀传统文化",
+      "def": "中华优秀传统文化"
+     },
+     {
+      "label": "革命传统",
+      "def": "革命传统"
+     },
+     {
+      "label": "生命安全与健康",
+      "def": "生命安全与健康"
+     },
+     {
+      "label": "法治",
+      "def": "法治"
+     },
+     {
+      "label": "国情",
+      "def": "国情"
+     }
+    ],
+    "初中.chinese": [
+     {
+      "label": "语言文字积累与梳理",
+      "def": "语言文字积累与梳理"
+     },
+     {
+      "label": "实用性阅读与交流",
+      "def": "实用性阅读与交流"
+     },
+     {
+      "label": "文学阅读与创意表达",
+      "def": "文学阅读与创意表达"
+     },
+     {
+      "label": "思辨性阅读与表达",
+      "def": "思辨性阅读与表达"
+     },
+     {
+      "label": "整本书阅读",
+      "def": "整本书阅读"
+     },
+     {
+      "label": "跨学科学习",
+      "def": "跨学科学习"
+     }
+    ],
+    "高中.math": [
+     {
+      "label": "预备知识",
+      "def": "预备知识"
+     },
+     {
+      "label": "函数",
+      "def": "函数"
+     },
+     {
+      "label": "几何与代数",
+      "def": "几何与代数"
+     },
+     {
+      "label": "概率与统计",
+      "def": "概率与统计"
+     },
+     {
+      "label": "数学建模活动与数学探究活动",
+      "def": "数学建模活动与数学探究活动"
+     }
+    ],
+    "高中.physics": [
+     {
+      "label": "机械运动与相互作用",
+      "def": "机械运动与相互作用"
+     },
+     {
+      "label": "机械能与动量",
+      "def": "机械能与动量"
+     },
+     {
+      "label": "静电场与电路",
+      "def": "静电场与电路"
+     },
+     {
+      "label": "磁场与电磁感应",
+      "def": "磁场与电磁感应"
+     },
+     {
+      "label": "热学",
+      "def": "热学"
+     },
+     {
+      "label": "光学与波",
+      "def": "光学与波"
+     },
+     {
+      "label": "近代物理",
+      "def": "近代物理"
+     },
+     {
+      "label": "实验",
+      "def": "实验"
+     }
+    ],
+    "高中.chemistry": [
+     {
+      "label": "必修基础",
+      "def": "必修基础"
+     },
+     {
+      "label": "化学反应原理",
+      "def": "化学反应原理"
+     },
+     {
+      "label": "物质结构与性质",
+      "def": "物质结构与性质"
+     },
+     {
+      "label": "有机化学基础",
+      "def": "有机化学基础"
+     }
+    ],
+    "高中.biology": [
+     {
+      "label": "分子与细胞",
+      "def": "分子与细胞"
+     },
+     {
+      "label": "遗传与进化",
+      "def": "遗传与进化"
+     },
+     {
+      "label": "稳态与调节",
+      "def": "稳态与调节"
+     },
+     {
+      "label": "生物与环境",
+      "def": "生物与环境"
+     },
+     {
+      "label": "生物技术与工程",
+      "def": "生物技术与工程"
+     }
+    ],
+    "高中.history": [
+     {
+      "label": "中外历史纲要",
+      "def": "中外历史纲要"
+     },
+     {
+      "label": "国家制度与社会治理",
+      "def": "国家制度与社会治理"
+     },
+     {
+      "label": "经济与社会生活",
+      "def": "经济与社会生活"
+     },
+     {
+      "label": "文化交流与传播",
+      "def": "文化交流与传播"
+     }
+    ],
+    "高中.geography": [
+     {
+      "label": "自然地理基础",
+      "def": "自然地理基础"
+     },
+     {
+      "label": "人文地理",
+      "def": "人文地理"
+     },
+     {
+      "label": "区域发展",
+      "def": "区域发展"
+     },
+     {
+      "label": "资源、环境与国家安全",
+      "def": "资源、环境与国家安全"
+     }
+    ],
+    "高中.politics": [
+     {
+      "label": "中国特色社会主义",
+      "def": "中国特色社会主义"
+     },
+     {
+      "label": "经济与社会",
+      "def": "经济与社会"
+     },
+     {
+      "label": "政治与法治",
+      "def": "政治与法治"
+     },
+     {
+      "label": "哲学与文化",
+      "def": "哲学与文化"
+     },
+     {
+      "label": "当代国际政治与经济",
+      "def": "当代国际政治与经济"
+     },
+     {
+      "label": "法律与生活",
+      "def": "法律与生活"
+     },
+     {
+      "label": "逻辑与思维",
+      "def": "逻辑与思维"
+     }
+    ],
+    "高中.chinese": [
+     {
+      "label": "实用类文本",
+      "def": "实用类文本"
+     },
+     {
+      "label": "文学类文本",
+      "def": "文学类文本"
+     },
+     {
+      "label": "论述类文本",
+      "def": "论述类文本"
+     },
+     {
+      "label": "古诗文",
+      "def": "古诗文"
+     },
+     {
+      "label": "语言文字运用",
+      "def": "语言文字运用"
+     },
+     {
+      "label": "写作",
+      "def": "写作"
+     }
+    ]
+   },
+   "other": true
+  },
+  {
+   "id": "literacy",
+   "name": "主要核心素养",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "课标2022",
+    "课标2017"
+   ],
+   "ask": "这道题最主要考查哪一项核心素养？",
+   "valuesBy": {
+    "初中.math": [
+     {
+      "label": "抽象能力",
+      "def": "含数感、量感、符号意识"
+     },
+     {
+      "label": "运算能力",
+      "def": "运算"
+     },
+     {
+      "label": "几何直观",
+      "def": "含空间观念"
+     },
+     {
+      "label": "推理能力",
+      "def": "推理论证"
+     },
+     {
+      "label": "数据观念",
+      "def": "数据"
+     },
+     {
+      "label": "模型观念",
+      "def": "数学建模"
+     },
+     {
+      "label": "应用意识",
+      "def": "解决实际问题"
+     },
+     {
+      "label": "创新意识",
+      "def": "新定义、探究"
+     }
+    ],
+    "初中.physics": [
+     {
+      "label": "物理观念",
+      "def": "物理观念"
+     },
+     {
+      "label": "科学思维",
+      "def": "科学思维"
+     },
+     {
+      "label": "科学探究",
+      "def": "科学探究"
+     },
+     {
+      "label": "科学态度与责任",
+      "def": "科学态度与责任"
+     }
+    ],
+    "初中.chemistry": [
+     {
+      "label": "化学观念",
+      "def": "化学观念"
+     },
+     {
+      "label": "科学思维",
+      "def": "科学思维"
+     },
+     {
+      "label": "科学探究与实践",
+      "def": "科学探究与实践"
+     },
+     {
+      "label": "科学态度与责任",
+      "def": "科学态度与责任"
+     }
+    ],
+    "初中.biology": [
+     {
+      "label": "生命观念",
+      "def": "生命观念"
+     },
+     {
+      "label": "科学思维",
+      "def": "科学思维"
+     },
+     {
+      "label": "探究实践",
+      "def": "探究实践"
+     },
+     {
+      "label": "态度责任",
+      "def": "态度责任"
+     }
+    ],
+    "初中.history": [
+     {
+      "label": "唯物史观",
+      "def": "唯物史观"
+     },
+     {
+      "label": "时空观念",
+      "def": "时空观念"
+     },
+     {
+      "label": "史料实证",
+      "def": "史料实证"
+     },
+     {
+      "label": "历史解释",
+      "def": "历史解释"
+     },
+     {
+      "label": "家国情怀",
+      "def": "家国情怀"
+     }
+    ],
+    "初中.geography": [
+     {
+      "label": "人地协调观",
+      "def": "人地协调观"
+     },
+     {
+      "label": "综合思维",
+      "def": "综合思维"
+     },
+     {
+      "label": "区域认知",
+      "def": "区域认知"
+     },
+     {
+      "label": "地理实践力",
+      "def": "地理实践力"
+     }
+    ],
+    "初中.politics": [
+     {
+      "label": "政治认同",
+      "def": "政治认同"
+     },
+     {
+      "label": "道德修养",
+      "def": "道德修养"
+     },
+     {
+      "label": "法治观念",
+      "def": "法治观念"
+     },
+     {
+      "label": "健全人格",
+      "def": "健全人格"
+     },
+     {
+      "label": "责任意识",
+      "def": "责任意识"
+     }
+    ],
+    "初中.chinese": [
+     {
+      "label": "文化自信",
+      "def": "文化自信"
+     },
+     {
+      "label": "语言运用",
+      "def": "语言运用"
+     },
+     {
+      "label": "思维能力",
+      "def": "思维能力"
+     },
+     {
+      "label": "审美创造",
+      "def": "审美创造"
+     }
+    ],
+    "初中.english": [
+     {
+      "label": "语言能力",
+      "def": "语言能力"
+     },
+     {
+      "label": "文化意识",
+      "def": "文化意识"
+     },
+     {
+      "label": "思维品质",
+      "def": "思维品质"
+     },
+     {
+      "label": "学习能力",
+      "def": "学习能力"
+     }
+    ],
+    "高中.math": [
+     {
+      "label": "数学抽象",
+      "def": "数学抽象"
+     },
+     {
+      "label": "逻辑推理",
+      "def": "逻辑推理"
+     },
+     {
+      "label": "数学建模",
+      "def": "数学建模"
+     },
+     {
+      "label": "直观想象",
+      "def": "直观想象"
+     },
+     {
+      "label": "数学运算",
+      "def": "数学运算"
+     },
+     {
+      "label": "数据分析",
+      "def": "数据分析"
+     }
+    ],
+    "高中.physics": [
+     {
+      "label": "物理观念",
+      "def": "物理观念"
+     },
+     {
+      "label": "科学思维",
+      "def": "科学思维"
+     },
+     {
+      "label": "科学探究",
+      "def": "科学探究"
+     },
+     {
+      "label": "科学态度与责任",
+      "def": "科学态度与责任"
+     }
+    ],
+    "高中.chemistry": [
+     {
+      "label": "宏观辨识与微观探析",
+      "def": "宏观辨识与微观探析"
+     },
+     {
+      "label": "变化观念与平衡思想",
+      "def": "变化观念与平衡思想"
+     },
+     {
+      "label": "证据推理与模型认知",
+      "def": "证据推理与模型认知"
+     },
+     {
+      "label": "科学探究与创新意识",
+      "def": "科学探究与创新意识"
+     },
+     {
+      "label": "科学态度与社会责任",
+      "def": "科学态度与社会责任"
+     }
+    ],
+    "高中.biology": [
+     {
+      "label": "生命观念",
+      "def": "生命观念"
+     },
+     {
+      "label": "科学思维",
+      "def": "科学思维"
+     },
+     {
+      "label": "科学探究",
+      "def": "科学探究"
+     },
+     {
+      "label": "社会责任",
+      "def": "社会责任"
+     }
+    ],
+    "高中.history": [
+     {
+      "label": "唯物史观",
+      "def": "唯物史观"
+     },
+     {
+      "label": "时空观念",
+      "def": "时空观念"
+     },
+     {
+      "label": "史料实证",
+      "def": "史料实证"
+     },
+     {
+      "label": "历史解释",
+      "def": "历史解释"
+     },
+     {
+      "label": "家国情怀",
+      "def": "家国情怀"
+     }
+    ],
+    "高中.geography": [
+     {
+      "label": "人地协调观",
+      "def": "人地协调观"
+     },
+     {
+      "label": "综合思维",
+      "def": "综合思维"
+     },
+     {
+      "label": "区域认知",
+      "def": "区域认知"
+     },
+     {
+      "label": "地理实践力",
+      "def": "地理实践力"
+     }
+    ],
+    "高中.politics": [
+     {
+      "label": "政治认同",
+      "def": "政治认同"
+     },
+     {
+      "label": "科学精神",
+      "def": "科学精神"
+     },
+     {
+      "label": "法治意识",
+      "def": "法治意识"
+     },
+     {
+      "label": "公共参与",
+      "def": "公共参与"
+     }
+    ],
+    "高中.chinese": [
+     {
+      "label": "语言建构与运用",
+      "def": "语言建构与运用"
+     },
+     {
+      "label": "思维发展与提升",
+      "def": "思维发展与提升"
+     },
+     {
+      "label": "审美鉴赏与创造",
+      "def": "审美鉴赏与创造"
+     },
+     {
+      "label": "文化传承与理解",
+      "def": "文化传承与理解"
+     }
+    ],
+    "高中.english": [
+     {
+      "label": "语言能力",
+      "def": "语言能力"
+     },
+     {
+      "label": "文化意识",
+      "def": "文化意识"
+     },
+     {
+      "label": "思维品质",
+      "def": "思维品质"
+     },
+     {
+      "label": "学习能力",
+      "def": "学习能力"
+     }
+    ]
+   },
+   "other": true
+  },
+  {
+   "id": "wing",
+   "name": "考查要求",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "高考评价体系"
+   ],
+   "applies": {
+    "stages": [
+     "高中"
+    ]
+   },
+   "ask": "这道题最突出的考查要求是哪一项？",
+   "values": [
+    {
+     "label": "基础性",
+     "def": "基础知识和基本能力"
+    },
+    {
+     "label": "综合性",
+     "def": "跨模块、跨知识的综合"
+    },
+    {
+     "label": "应用性",
+     "def": "解决实际问题"
+    },
+    {
+     "label": "创新性",
+     "def": "新情境、新设问、开放探究"
+    }
+   ]
+  },
+  {
+   "id": "math_method",
+   "name": "主要思想方法",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "业内"
+   ],
+   "applies": {
+    "subjects": [
+     "math"
+    ]
+   },
+   "ask": "解这道题最主要用到哪种思想方法？",
+   "other": true,
+   "values": [
+    {
+     "label": "直接计算或公式代入",
+     "def": "直接计算或公式代入"
+    },
+    {
+     "label": "数形结合",
+     "def": "数形结合"
+    },
+    {
+     "label": "分类讨论",
+     "def": "分类讨论"
+    },
+    {
+     "label": "方程与函数",
+     "def": "方程与函数"
+    },
+    {
+     "label": "转化与化归",
+     "def": "转化与化归"
+    },
+    {
+     "label": "建模",
+     "def": "建模"
+    },
+    {
+     "label": "归纳与规律探索",
+     "def": "归纳与规律探索"
+    }
+   ]
+  },
+  {
+   "id": "experiment",
+   "name": "实验类型",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "课标2022",
+    "业内"
+   ],
+   "applies": {
+    "subjects": [
+     "physics",
+     "chemistry",
+     "biology"
+    ]
+   },
+   "ask": "这道题和实验的关系是什么？",
+   "values": [
+    {
+     "label": "非实验",
+     "def": "不涉及实验"
+    },
+    {
+     "label": "仪器与操作",
+     "def": "仪器使用、读数、操作规范"
+    },
+    {
+     "label": "测量",
+     "def": "测量某个量"
+    },
+    {
+     "label": "探究规律",
+     "def": "控制变量、探究规律、分析数据"
+    },
+    {
+     "label": "设计与评价",
+     "def": "设计方案或评价改进"
+    }
+   ]
+  },
+  {
+   "id": "chem_task",
+   "name": "化学任务",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "业内"
+   ],
+   "applies": {
+    "subjects": [
+     "chemistry"
+    ]
+   },
+   "ask": "这道题的主要任务是什么？",
+   "other": true,
+   "values": [
+    {
+     "label": "概念与性质判断",
+     "def": "概念与性质判断"
+    },
+    {
+     "label": "化学用语书写",
+     "def": "化学用语书写"
+    },
+    {
+     "label": "计算",
+     "def": "计算"
+    },
+    {
+     "label": "物质推断",
+     "def": "物质推断"
+    },
+    {
+     "label": "实验探究",
+     "def": "实验探究"
+    },
+    {
+     "label": "工艺流程",
+     "def": "工艺流程"
+    }
+   ]
+  },
+  {
+   "id": "material_type",
+   "groupLevel": true,
+   "name": "材料形式",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "业内"
+   ],
+   "applies": {
+    "subjects": [
+     "history",
+     "politics",
+     "geography",
+     "chinese"
+    ]
+   },
+   "ask": "这道题所给材料主要是什么形式？",
+   "values": [
+    {
+     "label": "无材料",
+     "def": "无材料"
+    },
+    {
+     "label": "文字材料",
+     "def": "文字材料"
+    },
+    {
+     "label": "图片或漫画",
+     "def": "图片或漫画"
+    },
+    {
+     "label": "表格或统计图",
+     "def": "表格或统计图"
+    },
+    {
+     "label": "地图或示意图",
+     "def": "地图或示意图"
+    }
+   ]
+  },
+  {
+   "id": "space_scope",
+   "name": "时空范围",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "业内"
+   ],
+   "applies": {
+    "subjects": [
+     "history"
+    ]
+   },
+   "ask": "这道题涉及的范围是什么？",
+   "values": [
+    {
+     "label": "中国",
+     "def": "中国"
+    },
+    {
+     "label": "世界",
+     "def": "世界"
+    },
+    {
+     "label": "中外关联",
+     "def": "中外关联"
+    }
+   ]
+  },
+  {
+   "id": "region_scale",
+   "name": "区域尺度",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "业内"
+   ],
+   "applies": {
+    "subjects": [
+     "geography"
+    ]
+   },
+   "ask": "这道题涉及的地理范围是什么？",
+   "values": [
+    {
+     "label": "全球",
+     "def": "全球"
+    },
+    {
+     "label": "大洲或世界分区",
+     "def": "大洲或世界分区"
+    },
+    {
+     "label": "外国",
+     "def": "外国"
+    },
+    {
+     "label": "中国整体",
+     "def": "中国整体"
+    },
+    {
+     "label": "中国分区或省区",
+     "def": "中国分区或省区"
+    },
+    {
+     "label": "家乡或局地",
+     "def": "家乡或局地"
+    },
+    {
+     "label": "不涉及具体区域",
+     "def": "不涉及具体区域"
+    }
+   ]
+  },
+  {
+   "id": "current_affairs",
+   "name": "是否结合时事",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "业内"
+   ],
+   "applies": {
+    "subjects": [
+     "politics"
+    ]
+   },
+   "ask": "这道题是否结合具体时事？",
+   "values": [
+    {
+     "label": "是",
+     "def": "以具体的时事、政策、事件为背景"
+    },
+    {
+     "label": "否",
+     "def": "没有具体时事"
+    }
+   ]
+  },
+  {
+   "id": "genre",
+   "groupLevel": true,
+   "name": "文本类型",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "课标2022",
+    "课标2017",
+    "业内"
+   ],
+   "applies": {
+    "subjects": [
+     "chinese"
+    ]
+   },
+   "ask": "这道题所依托的文本属于哪一类？",
+   "values": [
+    {
+     "label": "无文本",
+     "def": "无文本"
+    },
+    {
+     "label": "记叙文或小说散文",
+     "def": "记叙文或小说散文"
+    },
+    {
+     "label": "说明文",
+     "def": "说明文"
+    },
+    {
+     "label": "议论文",
+     "def": "议论文"
+    },
+    {
+     "label": "非连续性文本",
+     "def": "非连续性文本"
+    },
+    {
+     "label": "古诗词",
+     "def": "古诗词"
+    },
+    {
+     "label": "文言文",
+     "def": "文言文"
+    },
+    {
+     "label": "名著",
+     "def": "名著"
+    }
+   ]
+  },
+  {
+   "id": "discourse_type",
+   "groupLevel": true,
+   "name": "语篇类型",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "课标2022",
+    "课标2017"
+   ],
+   "applies": {
+    "subjects": [
+     "english"
+    ]
+   },
+   "ask": "这道题依托的语篇属于哪一类？",
+   "values": [
+    {
+     "label": "无语篇",
+     "def": "无语篇"
+    },
+    {
+     "label": "对话或访谈",
+     "def": "对话或访谈"
+    },
+    {
+     "label": "记叙文",
+     "def": "记叙文"
+    },
+    {
+     "label": "说明文",
+     "def": "说明文"
+    },
+    {
+     "label": "议论文",
+     "def": "议论文"
+    },
+    {
+     "label": "应用文",
+     "def": "应用文"
+    },
+    {
+     "label": "图表、广告或网页",
+     "def": "图表、广告或网页"
+    }
+   ]
+  },
+  {
+   "id": "theme_context",
+   "groupLevel": true,
+   "name": "主题语境",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "课标2022",
+    "课标2017"
+   ],
+   "applies": {
+    "subjects": [
+     "english"
+    ]
+   },
+   "ask": "这道题的主题语境属于哪一类？",
+   "values": [
+    {
+     "label": "人与自我",
+     "def": "人与自我"
+    },
+    {
+     "label": "人与社会",
+     "def": "人与社会"
+    },
+    {
+     "label": "人与自然",
+     "def": "人与自然"
+    },
+    {
+     "label": "无明显主题",
+     "def": "无明显主题"
+    }
+   ]
+  },
+  {
+   "id": "language_skill",
+   "name": "语言技能",
+   "level": "question",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "课标2022"
+   ],
+   "applies": {
+    "subjects": [
+     "english"
+    ]
+   },
+   "ask": "这道题主要考查哪种语言技能或知识？",
+   "values": [
+    {
+     "label": "听",
+     "def": "听"
+    },
+    {
+     "label": "读",
+     "def": "读"
+    },
+    {
+     "label": "看",
+     "def": "看"
+    },
+    {
+     "label": "说",
+     "def": "说"
+    },
+    {
+     "label": "写",
+     "def": "写"
+    },
+    {
+     "label": "词汇",
+     "def": "词汇"
+    },
+    {
+     "label": "语法",
+     "def": "语法"
+    }
+   ]
+  },
+  {
+   "id": "module",
+   "name": "模块",
+   "level": "question",
+   "kind": "single",
+   "method": "existing",
+   "source": [
+    "题库现状"
+   ],
+   "note": "沿用 item.module"
+  },
+  {
+   "id": "kps",
+   "name": "知识点",
+   "level": "question",
+   "kind": "multi",
+   "method": "existing",
+   "source": [
+    "题库现状"
+   ],
+   "note": "沿用 item.kps，1–3 个，主要的放第一个"
+  },
+  {
+   "id": "type",
+   "name": "题型",
+   "level": "question",
+   "kind": "single",
+   "method": "existing",
+   "source": [
+    "题库现状"
+   ],
+   "note": "沿用 item.type：选择 / 填空 / 解答"
+  },
+  {
+   "id": "points",
+   "name": "分值",
+   "level": "question",
+   "kind": "number",
+   "method": "existing",
+   "source": [
+    "题库现状"
+   ]
+  },
+  {
+   "id": "position",
+   "name": "卷面位置",
+   "level": "question",
+   "kind": "ordered",
+   "method": "rule",
+   "source": [
+    "题库现状"
+   ],
+   "note": "按全卷题序算五段"
+  },
+  {
+   "id": "has_figure",
+   "name": "是否有图",
+   "level": "question",
+   "kind": "bool",
+   "method": "existing",
+   "source": [
+    "题库现状"
+   ]
+  },
+  {
+   "id": "has_parts",
+   "name": "是否有小问",
+   "level": "question",
+   "kind": "bool",
+   "method": "rule",
+   "source": [
+    "题库现状"
+   ]
+  },
+  {
+   "id": "kp_grade",
+   "name": "年级",
+   "level": "kp",
+   "kind": "single",
+   "method": "existing",
+   "source": [
+    "题库现状"
+   ],
+   "note": "字典已有，按人教版；其他版本走教材映射表"
+  },
+  {
+   "id": "kp_type",
+   "name": "知识类型",
+   "level": "kp",
+   "kind": "single",
+   "method": "ai",
+   "source": [
+    "Anderson",
+    "业内"
+   ],
+   "ask": "这个知识点主要是哪一类知识？",
+   "values": [
+    {
+     "label": "事实常识",
+     "def": "需要记住的事实、名称、年代、常识"
+    },
+    {
+     "label": "概念定义",
+     "def": "概念、定义、分类"
+    },
+    {
+     "label": "公式定理规律",
+     "def": "公式、定理、定律、原理"
+    },
+    {
+     "label": "方法程序",
+     "def": "解法、步骤、技能、操作程序"
+    },
+    {
+     "label": "实验技能",
+     "def": "实验操作与探究方法"
+    },
+    {
+     "label": "语言规则",
+     "def": "语音、词汇、语法、修辞、写作规范"
+    }
+   ]
+  },
+  {
+   "id": "exam_kind",
+   "name": "考试类型",
+   "level": "paper",
+   "kind": "single",
+   "method": "registry",
+   "source": [
+    "题库现状",
+    "业内"
+   ],
+   "values": [
+    {
+     "label": "中考",
+     "def": "中考"
+    },
+    {
+     "label": "高考",
+     "def": "高考"
+    },
+    {
+     "label": "学业水平考试",
+     "def": "学业水平考试"
+    },
+    {
+     "label": "模拟考",
+     "def": "模拟考"
+    },
+    {
+     "label": "期末考",
+     "def": "期末考"
+    },
+    {
+     "label": "其他",
+     "def": "其他"
+    }
+   ]
+  },
+  {
+   "id": "stage",
+   "name": "学段",
+   "level": "paper",
+   "kind": "single",
+   "method": "registry",
+   "source": [
+    "题库现状"
+   ],
+   "values": [
+    {
+     "label": "初中",
+     "def": "初中"
+    },
+    {
+     "label": "高中",
+     "def": "高中"
+    }
+   ]
+  },
+  {
+   "id": "year",
+   "name": "年份",
+   "level": "paper",
+   "kind": "number",
+   "method": "registry",
+   "source": [
+    "题库现状"
+   ]
+  },
+  {
+   "id": "session",
+   "name": "场次",
+   "level": "paper",
+   "kind": "single",
+   "method": "registry",
+   "source": [
+    "业内"
+   ],
+   "values": [
+    {
+     "label": "单次",
+     "def": "单次"
+    },
+    {
+     "label": "春季",
+     "def": "春季"
+    },
+    {
+     "label": "秋季",
+     "def": "秋季"
+    },
+    {
+     "label": "1月",
+     "def": "1月"
+    },
+    {
+     "label": "6月",
+     "def": "6月"
+    }
+   ]
+  },
+  {
+   "id": "scope",
+   "name": "命题层级",
+   "level": "paper",
+   "kind": "single",
+   "method": "registry",
+   "source": [
+    "题库现状"
+   ],
+   "values": [
+    {
+     "label": "全国卷",
+     "def": "全国卷"
+    },
+    {
+     "label": "省卷",
+     "def": "省卷"
+    },
+    {
+     "label": "市卷",
+     "def": "市卷"
+    },
+    {
+     "label": "联考",
+     "def": "联考"
+    },
+    {
+     "label": "区县",
+     "def": "区县"
+    },
+    {
+     "label": "校际",
+     "def": "校际"
+    },
+    {
+     "label": "待核实",
+     "def": "待核实"
+    }
+   ]
+  },
+  {
+   "id": "paper_variant",
+   "name": "卷别",
+   "level": "paper",
+   "kind": "text",
+   "method": "registry",
+   "source": [
+    "题库现状"
+   ],
+   "note": "如新课标 I 卷、甲卷、A 卷"
+  },
+  {
+   "id": "exam_regime",
+   "name": "考试制度",
+   "level": "paper",
+   "kind": "single",
+   "method": "registry",
+   "source": [
+    "题库现状",
+    "业内"
+   ],
+   "values": [
+    {
+     "label": "老高考文理",
+     "def": "老高考文理"
+    },
+    {
+     "label": "新高考",
+     "def": "新高考"
+    },
+    {
+     "label": "不适用",
+     "def": "不适用"
+    }
+   ],
+   "note": "各省选科模式是省的属性，不是卷的属性，记在出卷地图"
+  },
+  {
+   "id": "curriculum_edition",
+   "name": "适用课标",
+   "level": "paper",
+   "kind": "single",
+   "method": "registry",
+   "source": [
+    "课标2022",
+    "课标2017",
+    "业内"
+   ],
+   "values": [
+    {
+     "label": "义教2011",
+     "def": "义教2011"
+    },
+    {
+     "label": "义教2022",
+     "def": "义教2022"
+    },
+    {
+     "label": "高中2003",
+     "def": "高中2003"
+    },
+    {
+     "label": "高中2017",
+     "def": "高中2017"
+    }
+   ]
+  },
+  {
+   "id": "evidence_grade",
+   "name": "依据等级",
+   "level": "paper",
+   "kind": "ordered",
+   "method": "registry",
+   "source": [
+    "题库现状"
+   ],
+   "values": [
+    {
+     "label": "A原卷",
+     "def": "本地区当年真题"
+    },
+    {
+     "label": "B回忆版",
+     "def": "考生或机构回忆、网络收集版、缺题精简版"
+    },
+    {
+     "label": "C同省他市",
+     "def": "同省其他城市的卷"
+    },
+    {
+     "label": "D官方模拟",
+     "def": "当地教研部门组织的模拟"
+    }
+   ]
+  },
+  {
+   "id": "source_rank",
+   "name": "来源质量",
+   "level": "paper",
+   "kind": "ordered",
+   "method": "registry",
+   "source": [
+    "题库现状"
+   ],
+   "values": [
+    {
+     "label": "Word原卷",
+     "def": "Word原卷"
+    },
+    {
+     "label": "Word整理版",
+     "def": "Word整理版"
+    },
+    {
+     "label": "电子版PDF",
+     "def": "电子版PDF"
+    },
+    {
+     "label": "扫描PDF",
+     "def": "扫描PDF"
+    }
+   ]
+  },
+  {
+   "id": "completeness",
+   "name": "完整度",
+   "level": "paper",
+   "kind": "single",
+   "method": "rule",
+   "source": [
+    "题库现状",
+    "业内"
+   ],
+   "values": [
+    {
+     "label": "完整",
+     "def": "完整"
+    },
+    {
+     "label": "缺题",
+     "def": "缺题"
+    },
+    {
+     "label": "缺图",
+     "def": "缺图"
+    },
+    {
+     "label": "分值不全",
+     "def": "分值不全"
+    }
+   ]
+  },
+  {
+   "id": "answer_status",
+   "name": "答案状态",
+   "level": "paper",
+   "kind": "single",
+   "method": "rule",
+   "source": [
+    "题库现状"
+   ],
+   "values": [
+    {
+     "label": "有答案和解析",
+     "def": "有答案和解析"
+    },
+    {
+     "label": "只有答案",
+     "def": "只有答案"
+    },
+    {
+     "label": "没有答案",
+     "def": "没有答案"
+    }
+   ]
+  },
+  {
+   "id": "display_policy",
+   "name": "展示策略",
+   "level": "paper",
+   "kind": "single",
+   "method": "registry",
+   "source": [
+    "题库现状"
+   ],
+   "values": [
+    {
+     "label": "可展示",
+     "def": "可展示"
+    },
+    {
+     "label": "标注回忆版后展示",
+     "def": "标注回忆版后展示"
+    },
+    {
+     "label": "只统计不展示",
+     "def": "只统计不展示"
+    }
+   ]
+  },
+  {
+   "id": "paper_difficulty",
+   "name": "全卷难度",
+   "level": "paper",
+   "kind": "ordered",
+   "method": "rule",
+   "source": [
+    "业内"
+   ],
+   "values": [
+    {
+     "label": "容易",
+     "def": "容易"
+    },
+    {
+     "label": "中等",
+     "def": "中等"
+    },
+    {
+     "label": "偏难",
+     "def": "偏难"
+    }
+   ],
+   "note": "按各题难度和分值估算得分率（易 0.8、中 0.5、难 0.2），0.7 和 0.4 分档；是估算，不是实测"
+  },
+  {
+   "id": "structure",
+   "name": "题型结构",
+   "level": "paper",
+   "kind": "text",
+   "method": "rule",
+   "source": [
+    "题库现状"
+   ],
+   "note": "各题型题数和分值"
+  },
+  {
+   "id": "pipeline_status",
+   "name": "入库状态",
+   "level": "paper",
+   "kind": "ordered",
+   "method": "rule",
+   "source": [
+    "题库现状"
+   ],
+   "values": [
+    {
+     "label": "已登记",
+     "def": "已登记"
+    },
+    {
+     "label": "已读取",
+     "def": "已读取"
+    },
+    {
+     "label": "校验通过",
+     "def": "校验通过"
+    },
+    {
+     "label": "已拆解",
+     "def": "已拆解"
+    },
+    {
+     "label": "已发布",
+     "def": "已发布"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": "r3",
+  "_note": "地区考情统计的判断规则，所有地区共用。改这里，再跑 region_stats.py。",
+  "slot_years": 6,
+  "slot": {
+    "fixed_miss": 1,
+    "module_miss": 1,
+    "rotate_min_kinds_miss": 1,
+    "diff_shift": 0.75,
+    "recent": 2
+  },
+  "kp": {
+    "window": 5,
+    "every": "window 内每年都考",
+    "often_min": 3,
+    "rare_max": 2
+  },
+  "trend": {
+    "recent": 2,
+    "line_ratio": 0.03,
+    "line_min": 3,
+    "gone_min_before": 2
+  },
+  "slot_count_tol": 0.1,
+  "slot_min_years": 3,
+  "_changes": {
+    "r2": "题号对照不再要求题型顺序完全相同：题量差 10% 以内、同题号题型一致 85% 以上即可；至少 3 年才做题号表",
+    "r3": "卷面一致性改看同题号的模块或题型（读卷时题型判断不稳），一致比例 80% 以上"
+  },
+  "slot_match": 0.8
+}

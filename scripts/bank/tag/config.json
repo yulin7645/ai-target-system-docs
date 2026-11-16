@@ -1,0 +1,21 @@
+{
+  "provider": "mixed",
+  "llm": "dsh:headless",
+  "jobs": 64,
+  "llmJobs": 64,
+  "promptVersion": "p2",
+  "default": "jev",
+  "routes": {
+    "literacy": "llm",
+    "context_complexity": "llm",
+    "context_source": "llm",
+    "math_method": "llm",
+    "chem_task": "llm",
+    "region_scale": "llm"
+  },
+  "thresholds": {
+    "difficulty": 0.25
+  },
+  "jevJobs": 256,
+  "run": "v1-p2"
+}
